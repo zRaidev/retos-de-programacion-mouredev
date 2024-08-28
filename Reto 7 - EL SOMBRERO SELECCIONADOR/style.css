@@ -1,0 +1,122 @@
+:root {
+  --green-color: #1A472A;
+  --gold-color: #FFC500;
+  --red-color: #7F0909;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: system-ui;
+}
+
+body {
+  background-color: #333;
+}
+
+header {
+  background-color: var(--green-color);
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: var(--gold-color);
+}
+
+button {
+  width: 175px;
+  height: 75px;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  background-color: var(--red-color);
+}
+
+button:hover {
+  color: var(--gold-color);
+}
+
+button:active {
+  background-color: #900b0b;
+}
+
+main {
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.options {
+  margin: 0 50px;
+}
+
+.results-modal {
+  width: 350px;
+  height: 300px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 20;
+  display: grid;
+}
+
+.modal-container {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-bg {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background-color: #0000008c;
+  z-index: 10;
+}
+
+.results-modal__h1, .results-modal__p, .results-modal__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+}
+
+.results-modal__p {
+  font-weight: 500;
+}
+
+.inactive {
+  display: none;
+}
+
+@keyframes appearFlex {
+  0% {
+    display: flex;
+    opacity: 0;
+  }
+  100% {
+    display: flex;
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    display: flex;
+    opacity: 0;
+  }
+  100% {
+    display: flex;
+    opacity: 1;
+  }
+}

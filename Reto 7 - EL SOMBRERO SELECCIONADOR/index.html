@@ -3,76 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Reto #7: El sombrero seleccionador</title>
 </head>
 <body>
-  <article class="form">
-    <h2 class="question"></h2>
-    <section class="answers">
-      <div class="answer-box">
-        <p class="answer1"></p>
+  <div class="modal-container inactive">
+    <div class="results-modal">
+      <h1 class="results-modal__h1">¡Felicidades!</h1>
+      <p class="results-modal__p"></p>
+      <div class="results-modal__btn">
+        <button>Reiniciar</button>
       </div>
-      <div class="answer-box">
-        <p class="answer2"></p>
-      </div>
-      <div class="answer-box">
-        <p class="answer3"></p>
-      </div>
-      <div class="answer-box">
-        <p class="answer4"></p>
-      </div>
-    </section>
-  </article>
+    </div>
+  </div>
+  <div class="modal-bg inactive"></div>
+  <div class="start">
+    <header>
+      <h1>El Sombrero Seleccionador</h1>
+    </header>
+    <main>
+      <button class="start-btn">Click para iniciar</button>
+    </main>
+  </div>
 
-
-  <style>
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: #333;
-      color: #fff;
-      font-family: system-ui, sans-serif;
-    }
-
-    .form {
-      text-align: center;
-    }
-
-    .answers {
-      display: flex;
-      flex-direction:row;
-      justify-content: space-evenly;
-      margin-top: 100px;
-    }
-
-    .answer-box {
-      background-color: #6a5acd;
-      width: 200px;
-      height: 75px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: 500;
-      user-select: none;
-    }
-
-    .answer-box:hover {
-      background-color: #584da2;
-    }
-
-    .answer-box:active {
-      background-color: #6759c0;
-    }
-
-    .question {
-      margin-top: 50px;
-      font-weight: 700;
-    }
-  </style>
-  <script src="code.js"></script>
+  <div class="game inactive">
+    <header>
+      <h1 class="question"></h1>
+    </header>
+    <main>
+      <button class="options option_1">Casa griffyndor</button>
+      <button class="options option_2">Casa griffyndor</button>
+      <button class="options option_3">Casa griffyndor</button>
+      <button class="options option_4">Casa griffyndor</button>
+    </main>
+  </div>
+  <script src="js/logic.js"></script>
+  <script src="js/functions.js"></script>
 </body>
 </html>
