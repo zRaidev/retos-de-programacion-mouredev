@@ -60,7 +60,12 @@ const Questions = [
     question: '¿Cuál es tu mascota?',
     answer: ['1. Sapo', '2. Lechuza', '3. Gato', '4. Serpiente',],
     house: [ravenclaw, gryffindor, hufflepuff, slytherin]
-  }
+  },
+  quest_5 = {
+    question: '¿Qué actividad prefieres en tu tiempo libre?',
+    answer: ['1. Leer un buen libro', '2. Competir en juegos', '3. Crear algo nuevo', '4. Planear tu próximo desafío'],
+    house: [ravenclaw, gryffindor, hufflepuff, slytherin]
+  }  
 ]
 
 const questionH1 = document.querySelector(".question");
@@ -69,12 +74,13 @@ const optionsBtn = document.querySelectorAll(".options");
 let questionIndex = 0;
 
 function printQuestion(quest) {
-  //for each
   questionH1.innerText = quest.question;
-  optionsBtn.forEach((element, index) => {
+  optionsBtn.forEach((element, index) => { // the index doesnt work
     element.innerText = quest.answer[index];
+    element.classList.add(quest.house[index])
   
     element.onclick = ()=>{
+      console.log(element)
       updateHousePoints(index);
       questionIndex++;
       if (questionIndex < Questions.length) {
@@ -107,6 +113,7 @@ function displayResults() {
   maxPoints = Math.max(gryffindor, hufflepuff, ravenclaw, slytherin);
   let house;
 
+  console.log(`gryffindor: ${gryffindor}, hufflepuff: ${hufflepuff}, ravenclaw: ${ravenclaw}, slytherin: ${slytherin}`)
   if (maxPoints === gryffindor) house = "Gryffindor";
   else if (maxPoints === hufflepuff) house = "Hufflepuff";
   else if (maxPoints === ravenclaw) house = "Ravenclaw";
